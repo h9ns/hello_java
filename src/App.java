@@ -13,6 +13,20 @@ public class App {
 
     }
 
+    /**
+     * Swap the two values in an array.
+     * @param arr the array containing exactly two values
+     */
+    public static void swap_values(int[] arr) {
+        if (arr == null || arr.length != 2) {
+            throw new IllegalArgumentException("Array must have only 2 elements");
+        }
+
+        int temp = arr[0];
+        arr[0] = arr[1];
+        arr[1] = temp;
+    }
+
     public static void main(String[] args) throws Exception {
         
         // initialize array of length 2
@@ -21,7 +35,6 @@ public class App {
         // print the elements of the array
         printArray(x);
 
-        // TO DO: write method to swap the values
         swap_values(x);
 
         // print the elements of the array
